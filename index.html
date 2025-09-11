@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظمة شباب مصر - وزارة الشباب والرياضة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0d1b2a;
+            --secondary-dark: #1b263b;
+            --gold: #d4af37;
+            --light-gold: #f1c40f;
+            --white: #ffffff;
+            --light-gray: #e0e0e0;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            line-height: 1.6;
+            direction: rtl;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--white);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(13, 27, 42, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 80px;
+            margin-left: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-menu li {
+            margin: 0 15px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('-1_orig.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--light-gray);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--primary-dark);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .section-title p {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+        }
+        
+        /* Vision & Mission */
+        .vision-mission {
+            background-color: var(--secondary-dark);
+        }
+        
+        .vm-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .vm-card {
+            background: linear-gradient(145deg, #1a2a3b, #22334a);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .vm-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .vm-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .vm-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        /* Activities */
+        .activities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .activity-card {
+            background-color: var(--secondary-dark);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .activity-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .activity-card:hover .activity-img img {
+            transform: scale(1.05);
+        }
+        
+        .activity-content {
+            padding: 20px;
+        }
+        
+        .activity-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+        
+        .activity-content p {
+            color: var(--light-gray);
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--gold);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            color: var(--light-gold);
+        }
+        
+        .read-more i {
+            margin-right: 5px;
+        }
+        
+        /* Provinces */
+        .provinces {
+            background-color: var(--secondary-dark);
+        }
+        
+        .provinces-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .province-card {
+            background: linear-gradient(145deg, #1a2a3b, #22334a);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .province-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .province-card h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .province-card p {
+            color: var(--light-gray);
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+        
+        .contact-details h4 {
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+        
+        .contact-form {
+            background: linear-gradient(145deg, #1a2a3b, #22334a);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--light-gray);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-dark);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--gold);
+            color: var(--primary-dark);
+        }
+        
+        .footer-links h3,
+        .footer-newsletter h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: var(--light-gray);
+            transition: var(--transition);
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--gold);
+            padding-right: 5px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+        
+        .newsletter-form button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            background-color: var(--gold);
+            color: var(--primary-dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--light-gold);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: var(--secondary-dark);
+            width: 90%;
+            max-width: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            background-color: var(--gold);
+            color: var(--primary-dark);
+        }
+        
+        .modal-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .modal-body h2 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .modal-body p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background-color: var(--primary-dark);
+                width: 80%;
+                height: calc(100vh - 80px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 50px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo img {
+                height: 40px;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            .vm-card, .activity-card, .province-card {
+                padding: 20px;
+            }
+            
+            .modal-body {
+                padding: 20px;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 8px 15px;
+            font-weight: 600;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="WhatsApp Image 2025-09-06 at 00.14.35.png" alt="شعار كيان شباب مصر">
+                <span class="logo-text">كيان سواعد شباب مصر</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">عن المنظمة</a></li>
+                    <li><a href="#activities">الأنشطة</a></li>
+                    <li><a href="#ai">الذكاء الاصطناعي</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>منظمة شباب مصر<br>التابعة لوزارة الشباب والرياضة</h1>
+            <p>نعمل معًا لبناء مستقبل أفضل لشباب مصر من خلال البرامج والأنشطة المبتكرة تحت رعاية وزارة الشباب والرياضة</p>
+            <div class="hero-buttons">
+                <a href="#activities" class="btn btn-primary">استكشف الأنشطة</a>
+                <a href="#contact" class="btn btn-secondary">انضم إلينا</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vision & Mission Section -->
+    <section id="about" class="vision-mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>رؤيتنا ورسالتنا</h2>
+                <p>نسعى لتمكين الشباب المصري وبناء مستقبل مشرق للوطن</p>
+            </div>
+            
+            <div class="vm-container">
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>رؤيتنا</h3>
+                    <p>بناء كوادر شبابية فاعلة وقادرة على الإسهام في تنمية المجتمع، وتحقيق مستهدفات رؤية مصر 2030.</p>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>تعريف الكيان</h3>
+                    <p>سواعد شباب مصر كيان شبابي 
+ يعمل تحت إشراف وزارة الشباب والرياضة، وعضو بالجمعية العمومية للاتحاد المصري للكيانات الشبابية، يسعى لتمكين الشباب وصناعة قيادات مؤثرة في خدمة المجتمع."</p>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>الرسالة</h3>
+               <p>يسعى فريق سواعد شباب مصر لتمكين الشباب عبر تدريبات وبرامج ومبادرات تنموية، مع تعزيز التواصل مع المؤسسات المجتمعية وتنمية مهارات القيادة لدى الشباب.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Activities Section -->
+      <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-title">
+                <h2>أنشطتنا وبرامجنا</h2>
+                <p>برامج متنوعة تلبي احتياجات الشباب في مختلف المجالات</p>
+            </div>
+            
+            <div class="activities-container">
+                <div class="activity-card" data-modal="activity1">
+                    <div class="activity-img">
+                        <img src="WhatsApp Image 2025-09-11 at 14.39.06.jpeg" alt="برنامج القيادة الشابة لتنمية مهارات القيادة لدى الشباب">
+                    </div>
+                    <div class="activity-content">
+                       <h3>برنامج القيادة الشابة</h3>
+                        <p>برنامج متخصص لتنمية مهارات القيادة والعمل الجماعي لدى الشباب من خلال ورش عمل وأنشطة عملية.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="activity-card" data-modal="activity2">
+                    <div class="activity-img">
+                        <img src="istockphoto-2166408617-612x612.jpg" alt="مبادرة الابتكار المجتمعي لدعم مشاريع الشباب الابتكارية">
+                    </div>
+                    <div class="activity-content">
+                        <h3>  البرمجة</h3>
+                        <p>تعلم البرمجة يمنحك القدرة على تصميم وبرمجة التطبيقات والمواقع والألعاب، ويفتح لك آفاقًا واسعة للإبداع وحل المشكلات التقنية.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="activity-card" data-modal="activity3">
+                    <div class="activity-img">
+                        <img src=",,,,,,,.jpg" alt="معسكرات التطوع لخدمة المجتمع وتنمية روح العمل التطوعي">
+                    </div>
+                    <div class="activity-content">
+                        <h3>معسكرات التطوع</h3>
+                         <p>الشبكات هي الأساس الذي يربط الأجهزة ببعضها ويتيح تبادل المعلومات بطريقة آمنة وفعّالة، مما يمكّنك من إدارة البنية التحتية الرقمية للمؤسسات.
+</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="activity-card" data-modal="activity4">
+                    <div class="activity-img">
+                        <img src="lll.jpg" alt="منتدى الحوار الشبابي لمناقشة قضايا الشباب وطرح الحلول">
+                    </div>
+                    <div class="activity-content">
+                          <h3>  تكنولوجيا المعلومات والاتصالات</h3>
+                         <p>مجال تكنولوجيا المعلومات والاتصالات يغطي كل ما يتعلق باستخدام الحاسوب والبرمجيات والتقنيات الرقمية لتسهيل التواصل وإدارة البيانات بفعالية.
+</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="activity-card" data-modal="activity5">
+                    <div class="activity-img">
+                        <img src=".....jpg" alt="بطولة الرياضة الشبابية لتعزيز الروح الرياضية والمنافسة الشريفة">
+                    </div>
+                    <div class="activity-content">
+                        <h3>  المهارات الشخصية</h3>
+                       <p>المهارات الشخصية هي مجموعة القدرات غير التقنية مثل التواصل، القيادة، التفكير النقدي، والعمل الجماعي، التي تساعدك على النجاح في بيئة العمل والحياة اليومية.
+</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="activity-card" data-modal="activity6">
+                    <div class="activity-img">
+                        <img src="حححح.jpg" alt="مهرجان الفنون والثقافة لإبراز مواهب الشباب في مختلف المجالات الفنية">
+                    </div>
+                    <div class="activity-content">
+                       <h3>  ريادة الاعمال</h3>
+                        <p>ريادة الأعمال هي القدرة على ابتكار أفكار جديدة وتحويلها إلى مشاريع ناجحة، مع تطوير مهارات القيادة واتخاذ القرار وتحمل المخاطر لتحقيق النمو والاستدامة.
+</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Provinces Section -->
+    <section id="provinces" class="provinces">
+        <div class="container">
+            <div class="section-title">
+                <h2>المحافظات والمنسقين</h2>
+                <p>منسقونا في مختلف محافظات مصر لخدمة الشباب في كل مكان</p>
+            </div>
+            
+            <div class="provinces-container">
+                <div class="province-card">
+                    <h3>القاهرة</h3>
+                    <p>أ. محمد أحمد</p>
+                    <p>محمول: 01001234567</p>
+                </div>
+                
+                <div class="province-card">
+                    <h3>الإسكندرية</h3>
+                    <p>أ. علي محمود</p>
+                    <p>محمول: 01001234568</p>
+                </div>
+                
+                <div class="province-card">
+                    <h3>الجيزة</h3>
+                    <p>أ. أحمد سعيد</p>
+                    <p>محمول: 01001234569</p>
+                </div>
+                
+                <div class="province-card">
+                    <h3>الدقهلية</h3>
+                    <p>أ. إيمان عبدالله</p>
+                    <p>محمول: 01001234570</p>
+                </div>
+                
+                <div class="province-card">
+                    <h3>أسوان</h3>
+                    <p>أ. محمود حسن</p>
+                    <p>محمول: 01001234571</p>
+                </div>
+                
+                <div class="province-card">
+                    <h3>الأقصر</h3>
+                    <p>أ. سارة محمد</p>
+                    <p>محمول: 01001234572</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Section -->
+    <section id="ai" class="ai-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>الذكاء الاصطناعي</h2>
+                <p>استخدام التقنيات الحديثة لخدمة شباب مصر</p>
+            </div>
+            
+            <div class="vm-container">
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    
+                    <a href="ai.html"><h3>منصة الذكاء الاصطناعي</h3></a>
+                    <p>منصة رقمية تستخدم تقنيات الذكاء الاصطناعي لتوجيه الشباب نحو البرامج والأنشطة المناسبة لمهاراتهم واهتماماتهم.</p>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>تحليل البيانات</h3>
+                    <p>نقوم بتحليل بيانات الشباب لتطوير برامج وأنشطة تلبي احتياجاتهم الحقيقية وتواكب متطلبات سوق العمل.</p>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>التعلم الذكي</h3>
+                    <p>نوفر منصات تعلم ذكية تتكيف مع مستوى كل شاب وتقدم محتوى تعليميًا مخصصًا حسب قدراته واحتياجاته.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>اتصل بنا</h2>
+                <p>يسعدنا تواصلكم معنا لأي استفسارات أو مقترحات</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>العنوان</h4>
+                            <p> مركز شباب الانفوشي بالاسكندريه</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>هاتف</h4>
+                            <p>+202 23456789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>بريد إلكتروني</h4>
+                            <p>info@egyouth.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        
+                        <div class="contact-details">
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم بالكامل</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="WhatsApp Image 2025-09-06 at 00.14.35.png" alt="شعار منظمة شباب مصر">
+                    <p>منظمة شباب مصر التابعة لوزارة الشباب والرياضة، نعمل معًا لبناء مستقبل أفضل لشباب مصر.</p>
+                    <div class="social-icons">
+                        <a href="facebookicon 2.png"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.linkedin.com/company/%D8%B3%D9%88%D8%A7%D8%B9%D8%AF-%D8%B4%D8%A8%D8%A7%D8%A8-%D9%85%D8%B5%D8%B1/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                       
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن المنظمة</a></li>
+                        <li><a href="#activities">الأنشطة</a></li>
+                        <li><a href="#ai">الذكاء الاصطناعي</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>روابط هامة</h3>
+                    <ul>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">خريطة الموقع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3> برعاية</h3>
+                    <p>كيان سواعد شباب مصر هو برنامج وطني تابع لوزارة الشباب والرياضة، يهدف إلى تمكين الشباب ودعم قدراتهم في مختلف المجالات الاجتماعية والتعليمية والريادية</p>
+                      <div class="footer-logo">
+                          <img src="download.png" alt="شعار منظمة شباب مصر">
+                      </div>
+                  
+</body>
+</html>
