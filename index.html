@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="سواعد شباب مصر" />
+  <title>سواعد شباب مصر</title>
+
+  <!-- Cairo font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Logo block -->
+      <div class="brand">
+        <!-- Use high-res PNG. استبدل path بالملف الحقيقي -->
+        <img src="WhatsApp Image 2025-09-06 at 00.14.35 copy.png" alt="لوجو سواعد شباب مصر" class="brand-logo" width="110" height="110">
+        <div class="brand-text">
+          <h1>سواعد شباب مصر</h1>
+          <p class="tagline">تمكين الشباب — مشاركة — بناء المجتمع</p>
+        </div>
+      </div>
+
+      <!-- Nav / menu -->
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMenu()">
+          <span class="hamb">☰</span>
+        </button>
+
+        <ul id="mainMenu" class="nav-list">
+          <li><a href="kyan.html" class="active">الرئيسية</a></li>
+          <li><a href="about.html">عن الكيان</a></li>
+          <li><a href="gallery.html">الأنشطة</a></li>
+          <li><a href="ai.html">AI</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h2 id="hero-heading">أهلاً بكم في <span>سواعد شباب مصر</span></h2>
+        <p class="lead">نحفّز الشباب ونقدّم فرصًا تعليمية وثقافية وتطوعية لرفع مهاراتهم والمساهمة في تنمية المجتمع.</p>
+        <div class="hero-cta">
+          <a href="#activities" class="btn primary">تعرف على أنشطتنا</a>
+          <a href="#provinces" class="btn ghost">المحافظات والمنسقين</a>
+        </div>
+      </div>
+
+      <!-- Sponsors block (logos) -->
+      <div class="sponsors" aria-hidden="false">
+        <span class="sponsor-label">برعاية</span>
+        <div class="sponsor-logos">
+          <!-- استبدل بالصور بجودة عالية -->
+          <img src="download.png" alt="وزارة الشباب والرياضة" class="sponsor-logo">
+          <img src="WhatsApp Image 2025-09-06 at 00.14.35 copy.png" alt="الاتحاد المصري للكيانات الشبابية" class="sponsor-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="container main-content" role="main">
+
+    <!-- Vision & Mission -->
+    <section class="card section-vision" aria-labelledby="vision-title">
+      <div class="card-grid">
+        <div class="card-item vision">
+          <h3 id="vision-title">رؤيتنا</h3>
+          <p>بناء كوادر شبابية فاعلة وقادرة على الإسهام في تنمية المجتمع، وتحقيق مستهدفات رؤية مصر 2030.</p>
+        </div>
+        <div class="card-item mission">
+          <h3 id="mission-title">تعريف الكيان</h3>
+          <p>سواعد شباب مصر كيان شبابي 
+ يعمل تحت إشراف وزارة الشباب والرياضة، وعضو بالجمعية العمومية للاتحاد المصري للكيانات الشبابية، يسعى لتمكين الشباب وصناعة قيادات مؤثرة في خدمة المجتمع.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activities (Gallery grid) -->
+    <section id="activities" class="section activities" aria-labelledby="activities-title">
+      <h2 id="activities-title">أنشطتنا</h2>
+      <p class="section-sub">اضغط على أي نشاط لمعرفة التفاصيل — كل نشاط يظهر بصورة مع وصف مختصر.</p>
+
+      <div class="activities-grid">
+        <!-- Activity card template - كرّر واستبدل المحتوى -->
+        <article class="activity-card" tabindex="0" role="button" aria-pressed="false" data-title="ورشة برمجة" data-desc="ورشة تدريبية في أساسيات البرمجة وتطبيقات الواقع العملي" data-img="act1.jpg" onclick="openActivity(this)">
+          <img src="istockphoto-2166408617-612x612.jpg" alt="ورشة برمجة" class="activity-img">
+          <div class="activity-meta">
+            <h4>ورشة برمجة</h4>
+            <p class="short">تدريب عملي للشباب في أساسيات البرمجة.</p>
+          </div>
+        </article>
+
+        <article class="activity-card" tabindex="0" role="button" aria-pressed="false" data-title="حملة تطوعية" data-desc="حملة لتنظيف الحدائق وزيارة دور الأيتام" data-img="act2.jpg" onclick="openActivity(this)">
+          <img src="WhatsApp Image 2025-09-11 at 14.36.35.jpeg" alt="حملة تطوعية" class="activity-img">
+          <div class="activity-meta">
+            <h4>حملة تطوعية</h4>
+            <p class="short">نشاط مجتمعي لخدمة البيئة والمجتمع.</p>
+          </div>
+        </article>
+
+        <article class="activity-card" tabindex="0" role="button" aria-pressed="false" data-title="ملتقى ثقافي" data-desc="ملتقى يضم فرق شبابية وعروض فنية ومحاضرات" data-img="act3.jpg" onclick="openActivity(this)">
+          <img src="WhatsApp Image 2025-09-11 at 14.39.06.jpeg" alt="ملتقى ثقافي" class="activity-img">
+          <div class="activity-meta">
+            <h4>ملتقى ثقافي</h4>
+            <p class="short">فعاليات ثقافية وفنية لشباب المحافظات.</p>
+          </div>
+        </article>
+
+        <!-- أضف المزيد حسب الحاجة -->
+      </div>
+    </section>
+
+    <!-- Provinces / Coordinators -->
+    <section id="provinces" class="section provinces" aria-labelledby="provinces-title">
+      <h2 id="provinces-title">محافظاتنا ومنسقوها</h2>
+      <p class="section-sub">فريق العمل الميداني — أنساق صور لكل منسق مع اسمه ومحافظته.</p>
+
+      <div class="provinces-grid">
+        <div class="prov-card">
+          <img src="WhatsApp Image 2025-09-11 at 14.43.42.jpeg" alt="اسم الؤسس" class="prov-photo">
+          <div class="prov-info">
+            <strong>كريم السيسي</strong>
+            <span>كيان سواعد شباب مصر</span>
+          </div>
+        </div>
+
+        <div class="prov-card">
+          <img src="coord2.jpg" alt="اسم المنسق" class="prov-photo">
+          <div class="prov-info">
+            <strong>,,,,,,,</strong>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="prov-card">
+          <img src="WhatsApp Image 2025-09-11 at 14.43.42.jpeg" alt="اسم المنسق" class="prov-photo">
+          <div class="prov-info">
+            <strong>كريم السيسي</strong>
+            <span>الإسكندرية</span>
+          </div>
+        </div>
+
+        <!-- كرر البطاقات حسب الحاجة -->
+      </div>
+    </section>
+
+    <!-- Contact / quick info -->
+    <section class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">تواصل معنا</h2>
+      <div class="contact-grid">
+        <div>
+          <p>📍 العنوان: القاهرة، مصر</p>
+          <p>📧 البريد: <a href="mailto:info@sawaedmasr.org">info@sawaedmasr.org</a></p>
+          <p>📞 الهاتف: <a href="tel:+201000000000">01000000000</a></p>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=61552694205226" target="_blank" rel="noopener" aria-label="فيسبوك">
+            <img src="facebookicon 2.png" alt="فيسبوك" width="36" height="36">
+          </a>
+          <a href="https://www.linkedin.com/in/karim-el-sisi-b55b8b279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="فيسبوك">
+            <img src="png.png" alt="linkedin" width="36" height="36">
+          </a>
+          <!-- أضف أيقونات انستجرام وتويتر إذا عندك -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="logo-small.png" alt="سواعد شباب مصر" class="footer-logo" width="60" height="60">
+        <div class="footer-text">
+          <p>© 2025 سواعد شباب مصر — جميع الحقوق محفوظة</p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="روابط سريعة">
+          <a href="privacy.html">سياسة الخصوصية</a>
+          <a href="terms.html">الشروط</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Activity Modal -->
+  <div id="activityModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle" aria-modal="true">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="إغلاق" onclick="closeModal()">✕</button>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="" class="modal-img">
+        <div class="modal-content">
+          <h3 id="modalTitle">عنوان النشاط</h3>
+          <p id="modalDesc">تفاصيل النشاط هنا</p>
+          <div class="modal-actions">
+            <a id="modalMore" href="#" class="btn primary">معرفة المزيد</a>
+            <button class="btn ghost" onclick="closeModal()">إغلاق</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Menu toggle for mobile
+    function toggleMenu() {
+      const btn = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('mainMenu');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    }
+
+    // Activity modal - fill and open
+    function openActivity(el) {
+      const title = el.getAttribute('data-title') || 'النشاط';
+      const desc = el.getAttribute('data-desc') || '';
+      const img = el.getAttribute('data-img') || 'act-placeholder.jpg';
+      const modal = document.getElementById('activityModal');
+
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalImg').alt = title;
+
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+
+      // trap focus (basic)
+      document.querySelector('.modal-close').focus();
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('activityModal');
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // Close modal on ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // Allow opening activity with Enter key for keyboard accessibility
+    document.querySelectorAll('.activity-card').forEach(card => {
+      card.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') openActivity(this);
+      });
+    });
+  </script>
+</body>
+</html>
